@@ -1,0 +1,88 @@
+// App Colors
+$alertColor: tomato;
+$successColor: #47ff7e;
+$primaryColor: #9147ff;
+$secondaryColor: #ffffff;
+// $tertiaryColor: #fff;
+$highlightPrimary: #dd01dd;
+$highlightSecondary: #ffffff;
+
+// Set Text Color
+@function setTextColor($color) {
+    @if (lightness($color) > 40) {
+        @return $secondaryColor;
+    }
+    @return $tertiaryColor;
+}
+
+// Create Touchable Opacity Effect
+@function touchableOpacity($backgroundColor) {
+    @if (lightness($backgroundColor) > 40) {
+        @return transparentize($secondaryColor, 0.5);
+    }
+    @return transparentize($tertiaryColor, 0.5);
+}
+
+// Text Elements
+@mixin h1 {
+    font-size: 1.5rem;
+    font-weight: 650;
+    @content;
+}
+
+@mixin h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    @content;
+}
+
+@mixin h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    @content;
+}
+
+@mixin text {
+    margin: 0;
+    @content;
+}
+
+@mixin background {
+    background: linear-gradient($secondaryColor, $primaryColor);
+}
+
+// TODO: work on fullpage overlay when drawer is open.
+@mixin overlay {
+    content: "";
+    z-index: -1;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.9;
+    @content;
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (min-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
