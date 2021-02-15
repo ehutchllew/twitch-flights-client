@@ -2,6 +2,7 @@
 
 .rootContainer {
     padding: $spacingMargin;
+    overflow-x: hidden;
 
     & .mainVideoSection {
         margin-top: $spacingMargin;

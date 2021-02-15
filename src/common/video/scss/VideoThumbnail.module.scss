@@ -2,9 +2,8 @@
 
 .rootContainer {
     background-color: gray;
-    flex: 1 2;
+    box-sizing: border-box;
     height: 200px;
-    margin: $spacingMargin;
-    max-width: 500px;
-    min-width: 300px;
+    margin-top: 3vw;
+    width: 30vw;
 }
