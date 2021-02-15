@@ -1,11 +1,27 @@
 import React from 'react';
 import { TitleBar } from '../common/titleBar/TitleBar';
+import { VideoMain } from '../common/video/VideoMain';
+import styles from './scss/HomeScreen.module.scss';
 
-export const HomeScreen = () => {
+interface IHomeScreenPropsFromState {
+    isMainVideoLive?: boolean;
+}
+interface IHomeScreenProps extends IHomeScreenPropsFromState {}
+export const HomeScreen = ( { isMainVideoLive }: IHomeScreenProps) => {
+    function renderMainVideo(){
+        return (
+            <VideoMain />
+        )
+    }
     return (
-        <div>
+        <div className={styles.rootContainer}>
             <TitleBar />
-            <h2>Home Page</h2>
+
+            {!isMainVideoLive && (
+                <section className={styles.mainVideoSection}>
+                    {renderMainVideo()}
+                </section>
+            )}
         </div>
     )
 }

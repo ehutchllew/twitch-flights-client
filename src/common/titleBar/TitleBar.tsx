@@ -10,7 +10,7 @@ export const TitleBar = () => {
                 <h1>Twitch Flights</h1>
             </section>
             <section className={styles.inputContainer}>
-                <TextInput />
+                <TextInput placeholder="Flight Number" />
                 <SecondaryButton label="Join Flights" style={{rootContainer: styles.secondaryButtonContainer}} />
                 <PrimaryButton label="New Flight" />
             </section>

@@ -1,0 +1,9 @@
+@import "../../config/config";
+
+.rootContainer {
+    padding: $spacingMargin;
+
+    & .mainVideoSection {
+        margin-top: $spacingMargin;
+    }
+}
