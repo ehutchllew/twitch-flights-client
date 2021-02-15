@@ -1,0 +1,12 @@
+@import "../../../config/config.scss";
+
+.rootContainer {
+    background-color: $successColor;
+    border: 1px solid $successColor;
+    border-radius: 5px;
+    padding: $spacingSmall;
+
+    &:active {
+        background-color: darken($successColor, 30%);
+    }
+}

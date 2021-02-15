@@ -1,0 +1,16 @@
+@import "../../../config/config.scss";
+
+.rootContainer {
+    background-color: $secondaryColor;
+    border: 1px solid $highlightPrimary;
+    border-radius: 5px;
+    padding: $spacingSmall;
+    box-sizing: border-box;
+    & .label {
+        color: $highlightPrimary;
+    }
+
+    &:active {
+        background-color: darken($secondaryColor, 30%);
+    }
+}

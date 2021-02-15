@@ -1,5 +1,8 @@
 @import "config/config.scss";
-
+* {
+    margin: 0;
+    padding: 0;
+}
 .App {
     @include background;
     display: flex;

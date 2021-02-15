@@ -7,6 +7,14 @@ $secondaryColor: #ffffff;
 $highlightPrimary: #dd01dd;
 $highlightSecondary: #ffffff;
 
+// App Spacings
+$spacingMargin: 12px;
+$spacingSmall: 8px;
+$spacingMedium: 12px;
+$spacingLarge: 16px;
+$spacingXLarge: 20px;
+$spacingXSmall: 4px;
+
 // Set Text Color
 @function setTextColor($color) {
     @if (lightness($color) > 40) {
