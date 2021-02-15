@@ -1,6 +1,6 @@
 import React from 'react';
 import { TitleBar } from '../common/titleBar/TitleBar';
-import { VideoMain } from '../common/video/VideoMain';
+import { VideoMain, VideoThumbnailGrid } from '../common/video';
 import styles from './scss/HomeScreen.module.scss';
 
 interface IHomeScreenPropsFromState {
@@ -22,6 +22,8 @@ export const HomeScreen = ( { isMainVideoLive }: IHomeScreenProps) => {
                     {renderMainVideo()}
                 </section>
             )}
+
+            <VideoThumbnailGrid streams={[1,2,3,4,5,6]} />
         </div>
     )
 }

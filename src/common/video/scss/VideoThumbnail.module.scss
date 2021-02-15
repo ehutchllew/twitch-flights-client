@@ -1,0 +1,10 @@
+@import "../../../config/config";
+
+.rootContainer {
+    background-color: gray;
+    flex: 1 2;
+    height: 200px;
+    margin: $spacingMargin;
+    max-width: 500px;
+    min-width: 300px;
+}
