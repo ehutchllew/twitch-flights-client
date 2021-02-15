@@ -23,7 +23,7 @@ export const HomeScreen = ( { isMainVideoLive }: IHomeScreenProps) => {
                 </section>
             )}
 
-            <VideoThumbnailGrid streams={[1,2,3,4,5,6]} />
+            <VideoThumbnailGrid streams={[1,2,3,4,5,6, 7]} />
         </div>
     )
 }
