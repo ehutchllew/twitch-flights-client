@@ -8,13 +8,14 @@ interface ISecondaryButtonStyles {
 }
 
 interface ISecondaryButtonProps {
-    style?: Partial<ISecondaryButtonStyles>;
     label: string;
+    onClick: () => void;
+    style?: Partial<ISecondaryButtonStyles>;
 }
 
-export const SecondaryButton = ({ label, style }: ISecondaryButtonProps) => {
+export const SecondaryButton = ({ label, onClick, style }: ISecondaryButtonProps) => {
     return (
-    <button className={`${styles.rootContainer} ${style?.rootContainer}`}>
+    <button className={`${styles.rootContainer} ${style?.rootContainer}`} onClick={onClick}>
         <BodyHeavy className={styles.label}>{label}</BodyHeavy>
     </button>
     );

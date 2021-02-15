@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styles from "./scss/TextInput.module.scss";
 
 interface ITextInputProps {
+    onChangeValue: (e: ChangeEvent<HTMLInputElement>) => void;
     placeholder?: string;
     value?: string;
 }
 
-export const TextInput = ( { placeholder, value }: ITextInputProps) => {
+export const TextInput = ( { onChangeValue, placeholder, value }: ITextInputProps) => {
     return (
-        <input className={styles.rootContainer} placeholder={placeholder} value={value} />
+        <input className={styles.rootContainer} onChange={onChangeValue} placeholder={placeholder} value={value} />
     )
 }

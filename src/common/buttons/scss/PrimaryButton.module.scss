@@ -4,6 +4,7 @@
     background-color: $successColor;
     border: 1px solid $successColor;
     border-radius: 5px;
+    display: inline-flex;
     padding: $spacingSmall;
 
     &:active {
